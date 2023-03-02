@@ -10,43 +10,43 @@ const listContacts = async () => {
     const bufferData = await fs.readFile(contactsPath);
 
     const contacts = JSON.parse(bufferData);
-    console.log(contacts);
+    console.table(contacts);
   } catch (error) {
     console.log(error);
   }
 };
 
-const getContactByID = async (contactID) => {
+const getContactByID = async contactID => {
   try {
     const bufferData = await fs.readFile(contactsPath);
 
     const contact = JSON.parse(bufferData).find(
-      (item) => item.id === String(contactID)
+      item => item.id === String(contactID)
     );
 
-    console.log(contact);
+    console.table(contact);
   } catch (error) {
     console.log(error);
   }
 };
 
-const removeContact = async (contactID) => {
+const removeContact = async contactID => {
   try {
     const bufferData = await fs.readFile(contactsPath);
 
     const contactsNew = JSON.parse(bufferData).filter(
-      (item) => item.id !== String(contactID)
+      item => item.id !== String(contactID)
     );
 
     await fs.writeFile(contactsPath, JSON.stringify(contactsNew));
 
-    console.log(contactsNew);
+    console.table(contactsNew);
   } catch (error) {
     console.log(error);
   }
 };
 
-const addContact = async (contact) => {
+const addContact = async contact => {
   try {
     const contactNew = { id: shortid.generate(), ...contact };
 
@@ -56,7 +56,7 @@ const addContact = async (contact) => {
 
     await fs.writeFile(contactsPath, JSON.stringify(contactsNew));
 
-    console.log(contactsNew);
+    console.table(contactsNew);
   } catch (error) {
     console.log(error);
   }

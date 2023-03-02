@@ -1,13 +1,26 @@
 # goit-node-wh-1
 
-1. node index.js --action list
-   https://monosnap.com/file/5g9Vkiepoe7DhHVCQ8bg2KJw0dsR6I
+# Получаем и выводим весь список контактов в виде таблицы (console.table)
 
-2. node index.js --action get --id 5
-   https://monosnap.com/file/AldZFdHgiZznxYhOmYWsx4HKs5HWdQ
+node index.js --action list
 
-3. node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-22
-   https://monosnap.com/file/KnTcD5s1Y5XFRuQpngSub9DugiCLKA
+https://monosnap.com/file/1CJ4TuZBnqVQnxtDkb0MAfwk2Imtgv
 
-4. node index.js --action remove --id=3
-   https://monosnap.com/file/PwOvV6GEjZPbHbY6XF0pipDnAG9Xoy
+# Получаем контакт по id
+
+node index.js --action get --id 5
+
+https://monosnap.com/file/Ebtk8koyM0eKfj1THa2ipyqQAULDKs
+
+# Добавялем контакт
+
+node index.js --action add --name Mango --email mango@gmail.com --phone
+322-22-22
+
+https://monosnap.com/file/Y01cO75lGAMNtDAM1GYWs0XLq2K4at
+
+# Удаляем контакт
+
+node index.js --action remove --id=3
+
+https://monosnap.com/file/RorycXuvkLV6Q26aYfrvR17WDxbCaJ
